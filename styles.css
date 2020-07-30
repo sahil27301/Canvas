@@ -1,7 +1,49 @@
-* {
+canvas {
   overflow: hidden;
 }
 
-body{
+.button {
+  border-radius: 100%;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.button-selected {
+  outline: none;
+  box-shadow: none;
+  border-width: 3px;
+  width: 60px;
+  height: 60px;
+}
+
+/* Outline is to remove that annoying black box outline on clicking */
+
+.btn:hover {
+  outline: none;
+ }
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+body {
   text-align: center;
 }
