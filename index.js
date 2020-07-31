@@ -1,14 +1,25 @@
 const canvas = $("#canvas")[0];
 const ctx = canvas.getContext("2d");
-var drawing = false;
-//i've used the american spelling for color to keep it consistent lol
+var drawing = false
 var color='black';
+<<<<<<< HEAD
+var size = 20;
+=======
 var size = 1;
+>>>>>>> 9523084fcf32477c8c3059a5d9f3e093c059fc45
 var x, y;
 $(document).mousedown(function(){
   drawing=true;
   x = event.clientX - canvas.offsetLeft;
+<<<<<<< HEAD
+  y = event.clientY - canvas.offsetTop;
+  ctx.beginPath();
+  ctx.arc(x, y, size*0.5, 0, 2 * Math.PI, false);
+  ctx.fillStyle = color;
+  ctx.fill();
+=======
   y = event.clientY - canvas.offsetTop + 10;
+>>>>>>> 9523084fcf32477c8c3059a5d9f3e093c059fc45
 });
 $(document).mouseup(function(){
   drawing=false;
@@ -33,14 +44,32 @@ $("button").mousedown(function(e){
 });
 
 $("button").click(function(){
-  // First remove highlighting for any other colours
   $("button").removeClass("button-selected");
-  // Then add it to whichevr one you want
   $(this).addClass("button-selected");
-  // Now make it the active colour
   color = this.classList[0];
 });
 
+<<<<<<< HEAD
+var sliding=false;
+
 $(".slider").click(function() {
   size = $(this).val();
+  sliding=true;
+  $(".sizeDemo").css("width", $(this).val());
+  $(".sizeDemo").css("height", $(this).val());
+});
+
+$(".slider").mouseup(function() {
+  sliding=false;
+});
+
+$(".slider").mousemove(function(){
+  if(sliding){
+    $(".sizeDemo").css("width", $(this).val());
+    $(".sizeDemo").css("height", $(this).val());
+  }
+=======
+$(".slider").click(function() {
+  size = $(this).val();
+>>>>>>> 9523084fcf32477c8c3059a5d9f3e093c059fc45
 });
