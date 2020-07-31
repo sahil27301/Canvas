@@ -3,11 +3,12 @@ const ctx = canvas.getContext("2d");
 var drawing = false;
 //i've used the american spelling for color to keep it consistent lol
 var color='black';
+var size = 1;
 var x, y;
 $(document).mousedown(function(){
   drawing=true;
   x = event.clientX - canvas.offsetLeft;
-  y = event.clientY - canvas.offsetTop;
+  y = event.clientY - canvas.offsetTop + 10;
 });
 $(document).mouseup(function(){
   drawing=false;
@@ -17,7 +18,7 @@ $("#canvas").mousemove(function(){
     return;
   }
   ctx.beginPath();
-  ctx.lineWidth = 5;
+  ctx.lineWidth = size;
   ctx.lineCap = 'round';
   ctx.strokeStyle = color;
   ctx.moveTo(x, y);
@@ -38,4 +39,8 @@ $("button").click(function(){
   $(this).addClass("button-selected");
   // Now make it the active colour
   color = this.classList[0];
+});
+
+$(".slider").click(function() {
+  size = $(this).val();
 });
