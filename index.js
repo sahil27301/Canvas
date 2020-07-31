@@ -39,6 +39,7 @@ $("button").click(function(){
   $("button").removeClass("button-selected");
   $(this).addClass("button-selected");
   color = this.classList[0];
+  $(".sizeDemo").css("background-color", color);
 });
 
 var sliding=false;

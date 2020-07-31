@@ -39,6 +39,8 @@
 
 
  .sizeDemo {
+   border-style: solid;
+   border-width: 1px;
    height: 20px;
    width: 20px;
    background-color: black;
