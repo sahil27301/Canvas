@@ -80,21 +80,14 @@ body {
 
 .slider {
   -webkit-appearance: none;
-<<<<<<< HEAD
   width: 40%;
-=======
-  width: 50%;
->>>>>>> 9523084fcf32477c8c3059a5d9f3e093c059fc45
   height: 25px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
-<<<<<<< HEAD
-  display: inline-block;
-=======
->>>>>>> 9523084fcf32477c8c3059a5d9f3e093c059fc45
+
 }
 
 .slider:hover {
