@@ -42,13 +42,13 @@ $("button").click(function(){
   $(".sizeDemo").css("background-color", color);
 });
 
-var sliding=false;
+var sliding=true;
 
 $(".slider").click(function() {
-  size = $(this).val();
-  sliding=true;
   $(".sizeDemo").css("width", $(this).val());
   $(".sizeDemo").css("height", $(this).val());
+  size = $(this).val();
+  sliding=true;
 });
 
 $(".slider").mouseup(function() {
@@ -60,4 +60,5 @@ $(".slider").mousemove(function(){
     $(".sizeDemo").css("width", $(this).val());
     $(".sizeDemo").css("height", $(this).val());
   }
+  size = $(this).val();
 });
