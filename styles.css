@@ -138,3 +138,22 @@ border-spacing: 2px;
 th {
   color: #f85f73;
 }
+
+.clear {
+  position: absolute;
+  right: 133px;
+  bottom: 20px;
+  height: 50px;
+  font-size: 150%;
+  color: white;
+  background-color: red;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  border-radius: 10%;
+  border-style: none;
+}
+
+.clear:focus{
+  outline: none;
+  box-shadow: none;
+}

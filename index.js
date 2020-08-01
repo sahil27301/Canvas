@@ -31,11 +31,11 @@ $("#canvas").mousemove(function(){
   ctx.stroke()
 });
 
-$("button").mousedown(function(e){
+$(".button").mousedown(function(e){
   e.preventDefault()
 });
 
-$("button").click(function(){
+$(".button").click(function(){
   $("button").removeClass("button-selected");
   $(this).addClass("button-selected");
   color = this.classList[0];
@@ -61,4 +61,22 @@ $(".slider").mousemove(function(){
     $(".sizeDemo").css("height", $(this).val());
   }
   size = $(this).val();
+});
+
+var clearing=false;
+
+$(".clear").mousedown(function(){
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(0, 0, 1000, 500);
+  $(".clear").css("color", "red");
+  $(".clear").css("background-color", "white");
+  clearing=true;
+});
+
+$(document).mouseup(function(){
+  if(clearing){
+    $(".clear").css("color", "white");
+    $(".clear").css("background-color", "red");
+    clearing=false;
+  }
 });
