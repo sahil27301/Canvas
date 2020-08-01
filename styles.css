@@ -14,7 +14,7 @@ background-color: white;
 
 .colors {
 position: absolute;
-top: 16%;
+top: 21%;
 right: 8%;
 }
 
@@ -59,7 +59,7 @@ h1 {
  margin-left: 50px;
  position: absolute;
  left: 1050px;
- bottom: 45px;
+ bottom: 15px;
 }
 
 .black {
@@ -138,4 +138,3 @@ border-spacing: 2px;
 th {
   color: #f85f73;
 }
-
